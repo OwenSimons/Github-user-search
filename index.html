@@ -16,19 +16,28 @@
 
 
 <body>
-<main>
-    <h1>Github analytics</h1>
+<main class="container">
+    <h1>Github users</h1>
 
     <section class="row" id="search">
         <div class="col s12 m4">
             <input v-model="Username" @input="fetch()">
-            <h3>{{ name }}</h3>
             <img v-bind:src="avatar"/>
         </div>
         <div class="col s12 m4">
-
+            <h5>Name: {{ name }}</h5>
+            <p>Location: {{ location }}</p>
+            <p>Company: {{ company }}</p>
+            <p>Followers: {{ followers }}</p>
+            <p>Following: {{ following }}</p>
+        </div>
+        <div class="col s12 m4">
+            <p>Public repositories: {{ public_repos }}</p>
+            <p>Public gists: {{ public_gists }}</p>
             <a v-bind:href="html_url"> <p> View Profile </p></a>
         </div>
+
+
         <div class="col s12">
            <p> {{ info }} </p>
         </div>
