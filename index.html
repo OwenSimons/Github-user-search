@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -12,17 +12,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 
-  </head>
+</head>
 
 
-  <body>
+<body>
+<main>
     <h1>Github analytics</h1>
 
-      <div id="search">
-        <input v-model="Username" @input="fetch()">
-        <img v-bind:src="avatar"/>
-        <p> {{ info }} </p>
-      </div>
+    <section class="row" id="search">
+        <div class="col s12 m4">
+            <input v-model="Username" @input="fetch()">
+            <h3>{{ name }}</h3>
+            <img v-bind:src="avatar"/>
+        </div>
+        <div class="col s12 m4">
 
-  <script src="js/test.js"></script>
-  </body>
+            <a v-bind:href="html_url"> <p> View Profile </p></a>
+        </div>
+        <div class="col s12">
+           <p> {{ info }} </p>
+        </div>
+    </section>
+</main>
+
+<script src="js/test.js"></script>
+</body>
