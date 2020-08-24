@@ -17,11 +17,12 @@
 
 <body>
 <main class="container">
-    <h1>Github users</h1>
+    <img src="img/GitHub-Mark-120px-plus.png">
+    <h3>Github user search</h3>
 
     <section class="row" id="search">
         <div class="col s12 m4">
-            <input v-model="Username" @input="fetch()">
+            <input v-model="Username" @input="fetch()" placeholder="Search username">
             <img v-bind:src="avatar"/>
         </div>
         <div class="col s12 m4">
