@@ -29,13 +29,17 @@
             <h5>Name: {{ name }}</h5>
             <p>Location: {{ location }}</p>
             <p>Company: {{ company }}</p>
+            <p>Blog: {{ blog }}</p>----------
             <p>Followers: {{ followers }}</p>
             <p>Following: {{ following }}</p>
+            <p>Bio: {{ bio }}</p>-----------------
+            <a v-bind:href="html_url"> <p> View Profile </p></a>
         </div>
         <div class="col s12 m4">
             <p>Public repositories: {{ public_repos }}</p>
             <p>Public gists: {{ public_gists }}</p>
-            <a v-bind:href="html_url"> <p> View Profile </p></a>
+            <p>Hireable: {{ hireable }}</p>
+            <p>Twitter: {{ twitter }}</p>
         </div>
 
 
