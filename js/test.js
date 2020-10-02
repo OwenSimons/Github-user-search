@@ -13,6 +13,11 @@ var search = new Vue({
             public_gists: null,
             followers: null,
             following: null,
+            blog: null,
+            bio: null,
+            hireable: null,
+            twitter: null,
+
         }
     },
     methods: {
@@ -31,7 +36,11 @@ var search = new Vue({
                         this.public_repos = response.data.public_repos,
                         this.public_gists = response.data.public_gists,
                         this.followers = response.data.followers,
-                        this.following = response.data.following))
+                        this.following = response.data.following,
+                        this.blog = response.data.blog,
+                        this.bio = response.data.bio,
+                        this.hireable = response.data.hireable,
+                        this.twitter = response.data.twitter))
 
                     .catch(error => this.info = error,
                         this.info = null,
@@ -43,7 +52,11 @@ var search = new Vue({
                         this.public_repos = null,
                         this.public_gists = null,
                         this.followers = null,
-                        this.following = null,)
+                        this.following = null,
+                        this.blog = null,
+                        this.bio = null,
+                        this.hireable = null,
+                        this.twitter = null)
             }
         }
     }
